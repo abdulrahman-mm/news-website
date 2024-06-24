@@ -9,7 +9,7 @@ function Navbar({ setCategory, darkMode, setDarkMode }) {
   return (
     <nav className="navbar navbar-expand-lg bg-primary">
       <div className="container-fluid">
-        <h3>News Of India</h3>
+        <h3>India Daily News</h3>
 
         <span>
           <i
