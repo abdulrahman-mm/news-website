@@ -1,0 +1,42 @@
+.card {
+  overflow: hidden;
+}
+
+.image-container {
+  overflow: hidden;
+  height: 150px;
+}
+
+.card-img-top {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-mode {
+  background-color: #212529;
+  color: #ffffff;
+}
+
+.container.light-mode,
+.card.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.container.dark-mode,
+.card.dark-mode {
+  background-color: #212529;
+  color: #ffffff;
+}
+
+.card.dark-mode {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
