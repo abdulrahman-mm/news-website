@@ -8,7 +8,7 @@ function Main({ category, darkMode }) {
 
   useEffect(() => {
     async function apiCall() {
-      let url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=5067406ab57340b9a6184676af7c6160`;
+      let url = `https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=5067406ab57340b9a6184676af7c6160`;
 
       try {
         let apiData = await axios.get(url);
