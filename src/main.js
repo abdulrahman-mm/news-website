@@ -24,14 +24,14 @@ function Main({ category, darkMode }) {
       className={`container mt-5 p-5 ${darkMode ? "dark-mode" : "light-mode"}`}
     >
       <div className="row">
-        {valueFromApi
+        {/* {valueFromApi
           .filter((item) => item.author !== null)
           .map((item, index) => (
             <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
               <a
                 href={item.url}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
                 style={{ textDecoration: "none" }}
               >
                 <div
@@ -55,13 +55,6 @@ function Main({ category, darkMode }) {
                           : item.title
                         : ""}
                     </h5>
-                    {/* <p className="card-text flex-grow-1">
-                      {item.description
-                        ? item.description.length > 60
-                          ? item.description.slice(0, 60) + "..."
-                          : item.description
-                        : "This News is a report of current event. This information about something that has just happened"}
-                    </p> */}
                     <a
                       href={item.url}
                       target="_blank"
@@ -74,7 +67,44 @@ function Main({ category, darkMode }) {
                 </div>
               </a>
             </div>
-          ))}
+          ))} */}
+          {valueFromApi
+  .filter((item) => item.author !== null)
+  .map((item, index) => (
+    <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div
+        className={`card h-100 ${darkMode ? "dark-mode" : "light-mode"}`}
+      >
+        <div className="image-container">
+          <img
+            className="card-img-top"
+            src={item.urlToImage ? item.urlToImage : image}
+            alt="News"
+            style={{ objectFit: "initial", height: "150px" }}
+          />
+        </div>
+        <div className="card-body d-flex flex-column">
+          <h5 className="card-title">
+            {item.title
+              ? item.title.length > 200
+                ? item.title.slice(0, 200) + "...."
+                : item.title
+              : ""}
+          </h5>
+          <a
+            href={item.url}
+            target="_blank"
+            className="btn btn-secondary mt-auto"
+            style={{ width: "150px" }}
+            rel="noreferrer"
+          >
+            Read More
+          </a>
+        </div>
+      </div>
+    </div>
+  ))}
+
       </div>
     </div>
   );

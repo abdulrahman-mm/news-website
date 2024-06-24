@@ -14,7 +14,7 @@ function Navbar({ setCategory, darkMode, setDarkMode }) {
         <span>
           <i
             onClick={() => setDarkMode(!darkMode)}
-            class="bi bi-circle-half"
+            className="bi bi-circle-half"
             style={{
               position: "absolute",
               left: "70%",
@@ -45,6 +45,7 @@ function Navbar({ setCategory, darkMode, setDarkMode }) {
             </label>
             <select
               name="select"
+              id="select"
               className="form-select me-3"
               style={{ width: "auto" }}
               aria-label="Default select example"
