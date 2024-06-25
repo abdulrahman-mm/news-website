@@ -51,15 +51,16 @@ function Navbar({ setCategory, darkMode, setDarkMode }) {
               aria-label="Default select example"
               onChange={onChangeSelectoptions}
             >
-              <option value="General" className="selected">
-                General
+              <option value="entertainment" className="selected">
+                Entertainment
               </option>
-              <option value="Business">Business</option>
-              <option value="Entertainment">Entertainment</option>
-              <option value="Health">Health</option>
-              <option value="Science">Science</option>
-              <option value="Sports">Sports</option>
-              <option value="Technology">Technology</option>
+              <option value="business">Business</option>
+              <option value="health">Health</option>
+              <option value="sports">Sports</option>
+              <option value="finance">Finance</option>
+              <option value="lifestyle">Lifestyle</option>
+              <option value="world">World</option>
+              <option value="food">Food</option>
             </select>
           </div>
         </div>

@@ -9,12 +9,14 @@ function Main({ category, darkMode }) {
   useEffect(() => {
     async function apiCall() {
       // let url = `https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=5067406ab57340b9a6184676af7c6160`;
-      let url = `https://fakestoreapi.com/products`;
+      // let url = `https://api.currentsapi.services/v1/latest-news?language=us&apiKey=f5-wQn48aXLI8XDse1mHc12pT4FPks9uAQLAvD5JLemU2uXl`
+
+      let url = `https://api.currentsapi.services/v1/latest-news?category=${category}&apiKey=f5-wQn48aXLI8XDse1mHc12pT4FPks9uAQLAvD5JLemU2uXl`
 
       try {
         let apiData = await axios.get(url);
-        SetValueFromApi(apiData.data);
-        console.log(apiData.data);
+        console.log(apiData.data.news);
+        SetValueFromApi(apiData.data.news);
       } catch (err) {
         console.error(err);
       }
@@ -44,7 +46,8 @@ function Main({ category, darkMode }) {
                 <div className="image-container">
                   <img
                     className="card-img-top"
-                    src={item.urlToImage ? item.urlToImage : image}
+                    // src={item.urlToImage ? item.urlToImage : image}
+                    src={item.image!== 'None' ? item.image : image}
                     alt="News"
                     style={{ objectFit: "initial", height: "150px" }}
                   />
