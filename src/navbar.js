@@ -9,7 +9,7 @@ function Navbar({ setCategory, darkMode, setDarkMode }) {
   return (
     <nav className="navbar navbar-expand-lg bg-primary">
       <div className="container-fluid">
-        <h3>India Daily News</h3>
+        <h3 className="text-white">Your News Partner</h3>
 
         <span>
           <i
@@ -40,7 +40,7 @@ function Navbar({ setCategory, darkMode, setDarkMode }) {
           id="navbarNav"
         >
           <div className="d-flex align-items-center ms-3">
-            <label htmlFor="select" className="me-2 h5 mb-0">
+            <label htmlFor="select" className="me-2 h5 mb-0 text-white">
               Category
             </label>
             <select
@@ -54,11 +54,11 @@ function Navbar({ setCategory, darkMode, setDarkMode }) {
               <option value="entertainment" className="selected">
                 Entertainment
               </option>
+              <option value="sports">Sports</option>
+              <option value="lifestyle">Lifestyle</option>
               <option value="business">Business</option>
               <option value="health">Health</option>
-              <option value="sports">Sports</option>
               <option value="finance">Finance</option>
-              <option value="lifestyle">Lifestyle</option>
               <option value="world">World</option>
               <option value="food">Food</option>
             </select>

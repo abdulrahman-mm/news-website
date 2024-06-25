@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./navbar";
 import Main from "./main";
-import "./main.css";
 
 function App() {
   const [category, setCategory] = useState("entertainment");
