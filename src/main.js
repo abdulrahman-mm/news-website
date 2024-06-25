@@ -44,8 +44,7 @@ function Main({ category, darkMode }) {
                 <div className="image-container">
                   <img
                     className="card-img-top"
-                    // src={item.urlToImage ? item.urlToImage : image}
-                    src={item.image}
+                    src={item.urlToImage ? item.urlToImage : image}
                     alt="News"
                     style={{ objectFit: "initial", height: "150px" }}
                   />
