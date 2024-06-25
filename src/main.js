@@ -8,11 +8,13 @@ function Main({ category, darkMode }) {
 
   useEffect(() => {
     async function apiCall() {
-      let url = `https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=5067406ab57340b9a6184676af7c6160`;
+      // let url = `https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=5067406ab57340b9a6184676af7c6160`;
+      let url = `https://fakestoreapi.com/products`;
 
       try {
         let apiData = await axios.get(url);
-        SetValueFromApi(apiData.data.articles);
+        SetValueFromApi(apiData.data);
+        console.log(apiData.data);
       } catch (err) {
         console.error(err);
       }
@@ -42,7 +44,8 @@ function Main({ category, darkMode }) {
                 <div className="image-container">
                   <img
                     className="card-img-top"
-                    src={item.urlToImage ? item.urlToImage : image}
+                    // src={item.urlToImage ? item.urlToImage : image}
+                    src={item.image}
                     alt="News"
                     style={{ objectFit: "initial", height: "150px" }}
                   />
